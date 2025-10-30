@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "202012225915",
+    "project_id": "eduvinitaapp",
+    "storage_bucket": "eduvinitaapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202012225915:android:85d25d8052713a83470dde",
+        "android_client_info": {
+          "package_name": "com.p4rfait.eduvinitaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6aB49klfXsJgFsyvqD9iEWX_U9e_roPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
