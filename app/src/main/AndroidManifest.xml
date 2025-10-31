@@ -39,6 +39,14 @@
             android:name=".RecogerTiendaActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".PedidoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CarritoActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

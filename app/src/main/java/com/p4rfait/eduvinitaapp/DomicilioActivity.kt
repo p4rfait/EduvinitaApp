@@ -57,8 +57,9 @@ class DomicilioActivity : AppCompatActivity() {
             Toast.makeText(this, "Buscar producto...", Toast.LENGTH_SHORT).show()
         }
 
-        binding.btnProfile.setOnClickListener {
-            Toast.makeText(this, "Ir al perfil", Toast.LENGTH_SHORT).show()
+        binding.btnCart.setOnClickListener {
+            startActivity(Intent(this, CarritoActivity::class.java))
+            finish()
         }
     }
 
