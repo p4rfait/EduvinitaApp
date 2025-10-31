@@ -20,7 +20,7 @@
 
         <!-- Pantalla principal después del login -->
         <activity
-            android:name=".HomeActivity"
+            android:name=".MenuActivity"
             android:exported="false" />
 
         <!-- Pantalla de inicio de sesión -->
