@@ -13,17 +13,6 @@
         android:theme="@style/Theme.EduvinitaApp"
         tools:targetApi="31">
 
-        <!-- Pantalla de Registro -->
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-
-        <!-- Pantalla principal después del login -->
-        <activity
-            android:name=".MenuActivity"
-            android:exported="false" />
-
-        <!-- Pantalla de inicio de sesión -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -32,6 +21,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".DomicilioActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RecogerTiendaActivity"
+            android:exported="false" />
 
     </application>
 
