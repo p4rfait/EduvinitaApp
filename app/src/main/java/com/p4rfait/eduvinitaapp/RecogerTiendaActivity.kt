@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import com.p4rfait.eduvinitaapp.databinding.ActivityRecogerTiendaBinding
 
 class RecogerTiendaActivity : AppCompatActivity() {
@@ -23,9 +26,25 @@ class RecogerTiendaActivity : AppCompatActivity() {
 
     private fun setupClickListeners() {
         binding.btnConfirmarRecoger.setOnClickListener {
-            Toast.makeText(this, "Pedido programado para recoger en Eduvinita Café", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, MenuActivity::class.java))
-            finish()
+            val user = FirebaseAuth.getInstance().currentUser
+            if (user != null) {
+                val db = FirebaseFirestore.getInstance()
+                val entrega = hashMapOf(
+                    "metodoEntrega" to "Recoger en tienda",
+                    "direccion" to "Local principal Eduvinita Café"
+                )
+
+                db.collection("usuarios")
+                    .document(user.uid)
+                    .set(entrega, SetOptions.merge())
+                    .addOnSuccessListener {
+                        Toast.makeText(this, "Método de entrega guardado: Recoger en tienda", Toast.LENGTH_SHORT).show()
+                        finish()
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(this, "Error al guardar método de entrega", Toast.LENGTH_SHORT).show()
+                    }
+            }
         }
 
         binding.btnDomicilioInactive.setOnClickListener {

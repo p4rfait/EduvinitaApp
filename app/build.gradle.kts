@@ -55,6 +55,8 @@ dependencies {
     implementation(libs.googleid)
     implementation(libs.androidx.recyclerview)
     implementation(libs.firebase.database)
+    implementation("com.github.bumptech.glide:glide:5.0.5")
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
