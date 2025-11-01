@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".RecogerTiendaActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#5E3023"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/eduvinita" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_search"
+            android:layout_marginEnd="10dp"
+            app:tint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/btnCart"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_cart"
+            android:padding="6dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recoger en Tienda"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#5E3023"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp"
+                android:background="#F5F5F5"
+                android:padding="4dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnDomicilioInactive"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#D9C2A7"
+                    android:text="A DOMICILIO"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:onClick="goToDomicilio" />
+
+                <!-- Botón RECOGER EN TIENDA (Activo) -->
+                <Button
+                    android:id="@+id/btnRecogerActive"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#456D66"
+                    android:text="RECOGER EN TIENDA"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- Información de ubicación -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F8F5F2"
+                android:padding="20dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvDireccionTienda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2da Calle Oriente y 3ra Avenida Sur\nSanta Tecla, La Libertad"
+                    android:textSize="16sp"
+                    android:textColor="#5E3023"
+                    android:gravity="center"
+                    android:lineSpacingExtra="6dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#D9C2A7"
+                    android:layout_marginVertical="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Santa Tecla | La Libertad"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#456D66"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Horario -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F8F5F2"
+                android:padding="20dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Horario de Atención"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#5E3023"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvHorario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lunes a Domingo:\n7:00 AM - 9:00 PM"
+                    android:textSize="14sp"
+                    android:textColor="#5E3023"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+
+            <!-- Botón de confirmación -->
+            <Button
+                android:id="@+id/btnConfirmarRecoger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmar Recoger en Tienda"
+                android:backgroundTint="#3E6B63"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:padding="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="#5E3023"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/navMenu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_menu"
+                app:tint="@android:color/white"/>
+            <TextView
+                android:text="Menú"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" android:layout_height="1dp" android:layout_width="1dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navFavoritos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_favorite"
+                app:tint="@android:color/white"/>
+            <TextView
+                android:text="Favoritos"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" android:layout_height="1dp" android:layout_width="1dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_profile"
+                app:tint="@android:color/white"/>
+            <TextView
+                android:text="Perfil"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" android:layout_height="1dp" android:layout_width="1dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
