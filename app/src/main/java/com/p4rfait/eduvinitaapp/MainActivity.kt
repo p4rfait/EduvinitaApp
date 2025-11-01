@@ -48,5 +48,6 @@ class MainActivity : AppCompatActivity() {
         btnGoRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
+
     }
 }
