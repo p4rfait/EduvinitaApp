@@ -3,11 +3,12 @@
 
  ### Integrantes:
 
- -Marvin Edgardo Artiga Gonzalez AG230133 <br />
- -Omarvis Innaun Mendoza Portillo MP192089
-<br />
- -Alejandra Marisol Hernández Monterrosa HM240103 <br />
- -Aslly Eduvina Hernández Melara HM240071
+ - Marvin Edgardo Artiga Gonzalez AG230133 <br />
+ - Omarvis Innaun Mendoza Portillo MP192089<br />
+
+ - Alejandra Marisol Hernández Monterrosa HM240103 <br />
+ - Aslly Eduvina Hernández Melara HM240071 <br />
+- Tomás Armando Campos Lopez CL23146
  
  ### Enlace de los mockups:
 - https://design.penpot.app/#/view?file-id=bbaed550-e65f-8192-8006-9e5cdfec8c64&page-id=bbaed550-e65f-8192-8006-9e5cdfec8c65&section=interactions&index=0&share-id=e7c79b0d-7aa0-808c-8006-b7cb47963011
